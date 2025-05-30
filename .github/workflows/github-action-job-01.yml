@@ -1,0 +1,19 @@
+### github-action-job-01.yml
+name: Test Github Actions jobs-01
+run-name: Github Actions jobs
+on:
+  push
+  
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.job }}
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.job }}
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ github.job }}
