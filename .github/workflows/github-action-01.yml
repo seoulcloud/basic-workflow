@@ -3,12 +3,12 @@
 name: Test GitHub Actions-01
 run-name: Run GitHub Actions-01
 on: 
-  push
+  workflow_dispatch
 
 jobs:
   Test-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - name: echo-01
+      - name: step-01
         run: |
           echo "Test Github Actions echo-01"
