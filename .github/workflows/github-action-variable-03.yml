@@ -4,7 +4,7 @@
 name: Test Github Actions variable-03
 run-name: Github Actions var,secret
 on:
-  workflow_dispatch
+  push
 
 
 
@@ -12,4 +12,11 @@ jobs:
   check-vars-context:
     runs-on: ubuntu-latest
     steps:
-      - name: "Hello, ${{ var.VAR_TEST }}"
+      - name: VarTEST
+        run: "Hello, ${{ vars.VAR_TEST }}"
+
+  check-secret-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SecretTEST
+        run: "Hello, ${{ secrets.SECRET_TEST }}"
