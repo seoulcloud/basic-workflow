@@ -1,5 +1,5 @@
 ### github-action-variable-01.yml
-#
+
 
 name: Test Github Actions variable-01
 on:
@@ -15,10 +15,11 @@ jobs:
       MESSAGE: HELLO
     steps:
       - name: "It's a day!"
+        if: ${{env.DAY_OF_WEEK == 'Thursday'}}
         run : echo "$MESSAGE Today is $DAY_OF_WEEK!"
 
-check-var2: 
-  runs-on: ubuntu-latest
-  steps:
-    - name: "It's a day!"
-      run : echo "$MESSAGE Today is $DAY_OF_WEEK!"
+  check-var2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "It's a day!"
+        run : echo "$MESSAGE Today is $DAY_OF_WEEK!"
