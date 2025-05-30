@@ -1,0 +1,13 @@
+### .github/workflows/github-actions-02.yml
+
+name: Test GitHub Actions-02
+run-name: Run GitHub Actions-02
+on: push
+
+jobs:
+  Test-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step-02
+        run: |
+          echo "test echo-02"
