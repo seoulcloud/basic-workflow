@@ -3,7 +3,7 @@
 name: Test GitHub Actions-01
 run-name: Run GitHub Actions-01
 on: 
-  dispatch
+  push
 
 jobs:
   Test-GitHub-Actions:
