@@ -16,5 +16,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: checkout-dir
+          
+      - name: Github Actions Checkout(others repo)
+        uses: actions/checkout@v4
+        with:
+          repostiory: actions/checkout
+          path: other-repo
+          
       - run: ls -al
   
