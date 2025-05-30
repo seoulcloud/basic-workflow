@@ -1,2 +1,17 @@
 ### github-action-variable-03.yml
+name: Test Github Actions variable-03
+run-name: Github Actions input,output
+on:
+  workflow_dispatch
+    inputs:
+      name:
+        description: 'name'
+        required: true
+        default: 'INPUT'
 
+jobs:
+  input-data:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Print input data
+        run: echo "Hello,${{ github.event.inputs.name }}"
