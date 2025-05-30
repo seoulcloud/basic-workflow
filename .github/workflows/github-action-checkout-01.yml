@@ -3,7 +3,7 @@
 name: test checkout-01
 run-name: run github actions checkout
 on:
-  push
+  workflow_dispatch
 
 jobs:
   checkout:
