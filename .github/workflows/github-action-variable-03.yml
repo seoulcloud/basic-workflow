@@ -12,4 +12,4 @@ jobs:
   check-vars-context:
     runs-on: ubuntu-latest
     steps:
-      - name: "Hello, Var_Test"
+      - name: "Hello, ${{ var.VAR_TEST }}"
