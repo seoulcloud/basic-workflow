@@ -1,0 +1,15 @@
+### github-action-variable-03.yml
+
+
+name: Test Github Actions variable-03
+run-name: Github Actions var,secret
+on:
+  workflow_dispatch
+
+
+
+jobs:
+  check-vars-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Hello, Var_Test"
