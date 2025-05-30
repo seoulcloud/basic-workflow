@@ -5,22 +5,23 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'nametobig'
+        description: 'name-to-big'
         required: true
         default: 'input'
 
 jobs:
   input-data:
-    runs-on: ubuntu_latest
+    runs-on: ubuntu-latest
     outputs:
       upper-name: ${{ steps.uppercase.outputs.result }}
     steps:
       - name: Print input data
         id: uppercase
-        run: echo "result=$(echo '${{ github.event.inputs.name }}')" | tr 'a-z' 'A-Z' $GITHUB_OUTPUT
+        run: echo "result=$(echo '${{ github.event.inputs.name }}' | tr 'a-z' 'A-Z')" >> $GITHUB_OUTPUT
 
   output-data:
+    needs: input-data
     runs-on: ubuntu-latest
     steps:
       - name: Print output data
-        run: echo "Hello,${{ needs.input-data.outputs.upper_name }}"
+        run: echo "Hello, ${{ needs.input-data.outputs.upper_name }}"
