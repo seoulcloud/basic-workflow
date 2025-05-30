@@ -1,4 +1,4 @@
-### github-action-variable-04.yml
+### 1github-action-variable-04.yml
 name: Test Github Actions variable-04
 run-name: Github Actions input,output
 on:
