@@ -1,5 +1,5 @@
-### github-action-variable-03.yml
-name: Test Github Actions variable-03
+### github-action-variable-04.yml
+name: Test Github Actions variable-04
 run-name: Github Actions input,output
 on:
   workflow_dispatch:
